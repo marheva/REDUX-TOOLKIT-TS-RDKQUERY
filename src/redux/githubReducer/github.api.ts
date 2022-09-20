@@ -41,10 +41,10 @@ export const githubApi = createApi({
                 }),
             }),
             createUser: build.mutation<any, any>({
-                query: () => ({
+                query: ({ id }) => ({
                     url: `...`,
                     method: 'POST',
-                    body: {},
+                    body: { id: id },
                 }),
             }),
         };
